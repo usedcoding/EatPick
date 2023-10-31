@@ -11,7 +11,7 @@ public class Text {
     private int number;
     private String foodName;
     private String brandName;
-    private String price;
+    private int price;
     private String gram;
     private int point;
     private String content;

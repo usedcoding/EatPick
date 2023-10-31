@@ -39,7 +39,8 @@ public class App {
                 String brandName = sc.nextLine();
 
                 System.out.print("가격 ) ");
-                String price = sc.nextLine();
+                int price = sc.nextInt();
+                sc.nextLine();
 
                 System.out.print("중량 ) ");
                 String gram = sc.nextLine();
@@ -51,9 +52,16 @@ public class App {
                 System.out.print("한 줄 평가 ) ");
                 String content = sc.nextLine();
 
-                Text text = new Text(number, foodName, brandName, price, gram, point,content);
+                Text text = new Text(number, foodName, brandName, price, gram, point, content);
                 textList.add(text);
 
+            }else if(command.equals("내가 쓴 게시글 보기")) {
+                System.out.println("총" + textList.toArray().length + "개의 게시글이 있습니다.");
+                for(int i = 0; i < textList.size(); i++) {
+                    Text text = textList.get(i);
+                    System.out.printf("%s, %s, %d, %s, %d, %s \n", text.getFoodName(), text.getBrandName(),
+                            text.getPrice(), text.getGram(), text.getPoint(), text.getContent() );
+                }
             }
 
         }
