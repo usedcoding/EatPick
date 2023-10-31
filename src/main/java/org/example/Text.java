@@ -8,10 +8,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class Text {
+    private int number;
     private String foodName;
     private String brandName;
     private String price;
     private String gram;
     private int point;
-    content
+    private String content;
 }
