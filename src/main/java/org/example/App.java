@@ -56,11 +56,71 @@ public class App {
                 textList.add(text);
 
             }else if(command.equals("내가 쓴 게시글 보기")) {
+
                 System.out.println("총" + textList.toArray().length + "개의 게시글이 있습니다.");
                 for(int i = 0; i < textList.size(); i++) {
                     Text text = textList.get(i);
                     System.out.printf("%s, %s, %d, %s, %d, %s \n", text.getFoodName(), text.getBrandName(),
                             text.getPrice(), text.getGram(), text.getPoint(), text.getContent() );
+                }
+
+                System.out.println("1. 수정");
+                System.out.println("2. 삭제 ");
+                System.out.println("3. 메인");
+                System.out.println("4. 로그아웃");
+                System.out.println("5. 종료");
+                String command1  = sc.nextLine();
+
+                if(command1.equals("수정")) {
+                    System.out.println("수정할 게시물 번호 ) ");
+                    long modifyId = sc.nextLong();
+                    sc.nextLine();
+                    for(int i = 0; i < textList.size(); i++) {
+                        Text text = textList.get(i);
+                        if(modifyId == text.getNumber()) {
+                            System.out.println("기존 ) "+ text.getNumber());
+                            System.out.println("수정 ) ");
+                            int number = sc.nextInt();
+                            sc.nextLine();
+                            text.setNumber(number);
+
+                            System.out.println("기존 ) "+ text.getNumber());
+                            System.out.println("수정 ) ");
+                            int number = sc.nextInt();
+                            sc.nextLine();
+                            text.setNumber(number);
+
+                            System.out.println("기존 ) "+ text.getNumber());
+                            System.out.println("수정 ) ");
+                            int number = sc.nextInt();
+                            sc.nextLine();
+                            text.setNumber(number);
+
+                            System.out.println("기존 ) "+ text.getNumber());
+                            System.out.println("수정 ) ");
+                            int number = sc.nextInt();
+                            sc.nextLine();
+                            text.setNumber(number);
+
+                            System.out.println("기존 ) "+ text.getNumber());
+                            System.out.println("수정 ) ");
+                            int number = sc.nextInt();
+                            sc.nextLine();
+                            text.setNumber(number);
+
+                            System.out.println("기존 ) "+ text.getNumber());
+                            System.out.println("수정 ) ");
+                            int number = sc.nextInt();
+                            sc.nextLine();
+                            text.setNumber(number);
+
+                            System.out.println("기존 ) "+ text.getNumber());
+                            System.out.println("수정 ) ");
+                            int number = sc.nextInt();
+                            sc.nextLine();
+                            text.setNumber(number);
+                        }
+                    }
                 }
             }
 
