@@ -1,4 +1,4 @@
-package org.example;
+package org.example.text;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,6 +8,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class Text {
+    private long id;
     private int number;
     private String foodName;
     private String brandName;
