@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.myText.Mytext;
+
 import org.example.text.Text;
 import org.example.text.TextController;
 
@@ -15,11 +15,9 @@ public class App {
 
         TextController textController = new TextController(sc);
 
-        Mytext mytext = new Mytext();
 
         while(true) {
-            System.out.print("명령어 ) ");
-            String command = sc.nextLine();
+
             System.out.println("게시글 작성");
             System.out.println("내가 쓴 게시글 보기");
             System.out.println("전체 게시글 보기");
@@ -36,37 +34,16 @@ public class App {
             System.out.println("로그아웃");
             System.out.println("종료");
 
+            System.out.print("명령어 ) ");
+            String command = sc.nextLine();
+
             if(command.equals("게시글 작성")) {
                 textController.create();
-
-
             }else if(command.equals("내가 쓴 게시글 보기")) {
                 textController.viewMyText();
-
-
-                }else if(command1.equals("삭제")) {
-                    mytext.removeMyText();
-                    System.out.print("삭제할 게시물 번호 )");
-                    int removeId = sc.nextInt();
-
-                    for(int i = 0; i < textList.size(); i++) {
-                        Text text = textList.get(i);
-                        if(removeId == text.getId()) {
-                            textList.remove(text);
-                        }
-                    }
-
-                } else if (command1.equals("메인")) {
-                    System.out.println("메인 화면으로 돌아갑니다.");
-                    return;
-                }else if(command1.equals("로그아웃")){
-
-                }else if(command1.equals("종료")) {
-                    System.out.println("종료합니다.");
-                    break;
-                }
             }
 
         }
     }
 }
+

@@ -12,6 +12,8 @@ public class TextController {
     public TextController(Scanner sc) {
         this.sc = sc;
     }
+
+
     public void create() {
         id++;
         System.out.print("카테고리 )");
@@ -64,48 +66,71 @@ public class TextController {
             System.out.println("수정할 게시물 번호 ) ");
             long modifyId = sc.nextLong();
             sc.nextLine();
-            for(int i = 0; i < textList.size(); i++) {
+            for (int i = 0; i < textList.size(); i++) {
                 Text text = textList.get(i);
-                if(modifyId == text.getId()) {
+                if (modifyId == text.getId()) {
 
-                    System.out.println("기존 카테고리 명 ) "+ text.getNumber());
+                    System.out.println("기존 카테고리 명 ) " + text.getNumber());
                     System.out.print("수정 ) ");
                     int number = sc.nextInt();
                     sc.nextLine();
                     text.setNumber(number);
 
-                    System.out.println("기존 음식명 ) "+ text.getFoodName());
+                    System.out.println("기존 음식명 ) " + text.getFoodName());
                     System.out.print("수정 ) ");
                     String foodName = sc.nextLine();
                     text.setFoodName(foodName);
 
-                    System.out.println("기존 브랜드 명 ) "+ text.getBrandName());
+                    System.out.println("기존 브랜드 명 ) " + text.getBrandName());
                     System.out.print("수정 ) ");
                     String brandName = sc.nextLine();
                     text.setBrandName(brandName);
 
-                    System.out.println("기존 가격 ) "+ text.getPrice());
+                    System.out.println("기존 가격 ) " + text.getPrice());
                     System.out.print("수정 ) ");
                     int price = sc.nextInt();
                     sc.nextLine();
                     text.setPrice(price);
 
-                    System.out.println("기존 중량 ) "+ text.getGram());
+                    System.out.println("기존 중량 ) " + text.getGram());
                     System.out.print("수정 ) ");
                     String gram = sc.nextLine();
                     text.setGram(gram);
 
-                    System.out.println("기존 별점 ) "+ text.getPoint());
+                    System.out.println("기존 별점 ) " + text.getPoint());
                     System.out.print("수정 ) ");
                     int point = sc.nextInt();
                     sc.nextLine();
                     text.setPoint(point);
 
-                    System.out.println("기존 한 줄 평가 ) "+ text.getContent());
+                    System.out.println("기존 한 줄 평가 ) " + text.getContent());
                     System.out.print("수정 ) ");
                     String content = sc.nextLine();
                     text.setContent(content);
+
                 }
             }
+        }else if(command1.equals("삭제")) {
+                System.out.print("삭제할 게시물 번호 )");
+                int removeId = sc.nextInt();
+
+                for(int i = 0; i < textList.size(); i++) {
+                    Text text = textList.get(i);
+                    if(removeId == text.getId()) {
+                            textList.remove(text);
+                    }
+                }
+
+        } else if (command1.equals("메인")) {
+                System.out.println("메인 화면으로 돌아갑니다.");
+
+        }else if(command1.equals("로그아웃")){
+
+        }else if(command1.equals("종료")) {
+                System.out.println("종료합니다.");
+
+        }
+
     }
 }
+
