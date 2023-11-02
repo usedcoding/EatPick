@@ -19,7 +19,7 @@ public class App {
         while(true) {
 
             System.out.println("게시글 작성");
-            System.out.println("내가 쓴 게시글 보기");
+            System.out.println("나의 게시글");
             System.out.println("전체 게시글 보기");
             System.out.println("카테고리 검색\n" +
                     "- 탄수화물\n" +
@@ -39,7 +39,7 @@ public class App {
 
             if(command.equals("게시글 작성")) {
                 textController.create();
-            }else if(command.equals("내가 쓴 게시글 보기")) {
+            }else if(command.equals("나의 게시글")) {
                 textController.viewMyText();
             }
 
