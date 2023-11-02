@@ -2,10 +2,14 @@ package org.example.myText;
 
 import org.example.text.Text;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MyTextController {
     Scanner sc;
+
+    List<Text> textList = new ArrayList<>();
     public MyTextController(Scanner sc) {
         this.sc = sc;
     }
